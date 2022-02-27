@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 st.set_page_config(page_title='Model Hyperparameter Tuning App',layout='wide') 
 #Setting Page layout, Page expands to full width
+import sklearn
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split,StratifiedKFold, cross_val_score
