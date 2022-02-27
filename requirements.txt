@@ -1,0 +1,32 @@
+import streamlit as st
+st.set_option('deprecation.showPyplotGlobalUse', False)
+import pandas as pd
+import numpy as np
+st.set_page_config(page_title='Model Hyperparameter Tuning App',layout='wide') 
+#Setting Page layout, Page expands to full width
+import sklearn
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split,StratifiedKFold, cross_val_score
+from sklearn.pipeline import Pipeline, make_pipeline
+from sklearn.metrics import accuracy_score
+from sklearn import tree
+from sklearn.model_selection import RandomizedSearchCV
+from IPython.display import Image
+from sklearn import metrics
+from sklearn.metrics import r2_score,mean_squared_error
+# we will use Gradient Boosting model as this gives us best result 
+# from sklearn.ensemble import GradientBoostingRegressor
+import xgboost
+from xgboost import XGBRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import (
+    AdaBoostRegressor,
+    GradientBoostingRegressor,
+    RandomForestRegressor,
+)
+import plotly.graph_objects as go #to plot visualization
+import plotly.express as px
+import matplotlib.pyplot as plt
+import altair as alt
+import seaborn as sns
